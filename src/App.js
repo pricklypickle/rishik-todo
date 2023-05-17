@@ -7,18 +7,15 @@ import TodoList from './TodoList';
 import { ReactDOM } from "react";
 
     
-export default function App() {
+ function App() {
     return (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<TodoList />} />
-
-          <Route path="/todo" element={<Todo />} />
-          <Route path="/*" element={<NoPage />} />
+            <Route path="todo" element={<Todo />} />
+            <Route path="*" element={<NoPage />} />
         </Routes>
       </BrowserRouter>
   );
 }
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<App />);
+export default App
